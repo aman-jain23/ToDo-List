@@ -1,0 +1,384 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #EED6D3;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #67595E;
+    font-size: 2.5rem;
+}
+
+.add-task {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.add-task input {
+    flex: 1;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.add-task button {
+    padding: 0.8rem 1.5rem;
+    background: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.add-task button:hover {
+    background: #357abd;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #EED6D3;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.task-item:hover {
+    background: #f0f0f0;
+}
+
+.task-item.completed {
+    background: #e8f5e9;
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    color: #666;
+}
+
+.task-text {
+    flex: 1;
+    font-size: 1rem;
+}
+
+.task-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn-edit {
+    background: #ffd700;
+    color: #333;
+}
+
+.btn-delete {
+    background: #ff4444;
+    color: white;
+}
+
+.btn-complete {
+    background: #4caf50;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 1rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .add-task {
+        flex-direction: column;
+    }
+
+    .task-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .task-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
+/* Existing styles here... */
+
+/* Add this part for hover effect */
+.task-item:hover {
+    transform: scale(1.05);* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', sans-serif;
+    }
+    
+    body {
+        background-color: #EED6D3; /* Updated background color for the whole layout */
+        padding: 2rem;
+        min-height: 100vh;
+    }
+    
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        background: linear-gradient(45deg, #4a90e2, #8e44ad);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 2.5rem;
+    }
+    
+    .add-task {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .add-task input {
+        flex: 1;
+        padding: 0.8rem;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 1rem;
+    }
+    
+    .add-task button {
+        padding: 0.8rem 1.5rem;
+        background: #4a90e2;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background 0.3s;
+    }
+    
+    .add-task button:hover {
+        background: #357abd;
+    }
+    
+    .task-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .task-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+        background: #EED6D3; /* Updated background color for each task item */
+        border-radius: 6px;
+        transition: background 0.3s;
+    }
+    
+    .task-item:hover {
+        background: #f0f0f0;
+    }
+    
+    .task-item.completed {
+        background: #e8f5e9;
+    }
+    
+    .task-item.completed .task-text {
+        text-decoration: line-through;
+        color: #666;
+    }
+    
+    .task-text {
+        flex: 1;
+        font-size: 1rem;
+    }
+    
+    .task-actions {
+        display: flex;
+        gap: 0.5rem;
+    }
+    
+    .btn {
+        padding: 0.5rem;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: opacity 0.3s;
+    }
+    
+    .btn:hover {
+        opacity: 0.8;
+    }
+    
+    .btn-edit {
+        background: #ffd700;
+        color: #333;
+    }
+    
+    .btn-delete {
+        background: #ff4444;
+        color: white;
+    }
+    
+    .btn-complete {
+        background: #4caf50;
+        color: white;
+    }
+    
+    @media (max-width: 600px) {
+        body {
+            padding: 1rem;
+        }
+    
+        .container {
+            padding: 1rem;
+        }
+    
+        .add-task {
+            flex-direction: column;
+        }
+    
+        .task-item {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    
+        .task-actions {
+            width: 100%;
+            justify-content: flex-end;
+        }
+    }
+    
+    /* Add this part for hover effect */
+    .task-item:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s;
+    }
+    
+    .task-editing {
+        width: 100%;
+        padding: 0.8rem;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 1rem;
+    }
+    
+    transition: transform 0.3s;
+}
+
+/* Existing styles here... */
+
+.task-editing {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+
+/* Add these new styles to your existing CSS */
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+}
+
+@keyframes floatUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    20% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    80% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+.task-completed-animation {
+    animation: fadeOut 0.8s ease forwards;
+}
+
+.completion-message {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #4caf50;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    animation: floatUp 2s ease-in-out forwards;
+    z-index: 1000;
+}
+
+/* Update your existing task-item.completed style */
+.task-item.completed {
+    background: #e8f5e9;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
